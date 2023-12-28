@@ -6,11 +6,11 @@
 #include <ctype.h>
 #include "ttc.h"
 
-void test_cases_for_students(struct station *kipling, struct train *first);
+void test_cases_for_debugging(struct station *kipling, struct train *first);
 
 int main(void) {
 	/* Simulate the TTC! */
-	/* To keep things consitent, we'll use a predefined seed of 1 */
+	/* To keep things consistent, we'll use a predefined seed of 1 */
 	srand(1);
 
 	int sim_time = 0;
@@ -31,8 +31,9 @@ int main(void) {
 	if (debugging == '1') {
 		printf("\n%s\n\n", "Tests for debugging purposes");
 		
-		test_cases_for_students(kipling, first);
+		test_cases_for_debugging(kipling, first);
 	} else {
+		/* if we're not debugging, then simulate! */
 		do {
 			printf("\n%s ", "Enter a simulation time (in minutes):");
 		
@@ -48,7 +49,6 @@ int main(void) {
 			exit(EXIT_FAILURE);
 		}
 	
-		/* if we're not debugging, then simulate! */
 		fprintf(sim_file, "time, avg_wait, num_trains, avg_dist\n");
 		
 		for (int i = 0; i < sim_time; i++) {
@@ -77,8 +77,8 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void test_cases_for_students(struct station *kipling, struct train *first) {
-	/* test cases for students */
+void test_cases_for_debugging(struct station *kipling, struct train *first) {
+	/* test cases for debugging */
 	
 	/* Test 1. enter passengers */
 	enter_passengers(kipling);

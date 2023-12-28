@@ -29,8 +29,6 @@ int contains_train_id(struct train *first, int value) {
 	while (curr_tn != NULL) {
 		if (curr_tn->id == value) {
 			contain_id = 1;
-			
-			//break;
 		}
 		
 		curr_tn = curr_tn->next;
@@ -40,7 +38,7 @@ int contains_train_id(struct train *first, int value) {
 }
 
 int train_at_position(struct train *first, int pos) {
-	/* Returns 1 iff there exists a train at position pos (given to students) */
+	/* Returns 1 iff there exists a train at position pos */
 	/* PRE: none */
 	/* POST: none */
 	
