@@ -1,8 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -O2 -march=native
 
-.PHONY: clean
-
 clean_test_passenger:
 	rm -f test_passenger test_passenger.o
 	
