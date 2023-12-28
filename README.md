@@ -9,4 +9,4 @@ make sim && ./sim
 Once you are done:
 make clean_sim
 
-See Wiki for details on usage, specifications and testing...
+See Wiki for details on usage, specifications and testing: https://github.com/ignaciop/ttc-simulation/wiki
